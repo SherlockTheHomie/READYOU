@@ -1,27 +1,12 @@
 // TODO: Include packages needed for this application
 
-// TODO: Create an array of questions for user input
-const questions = [];
-
-
-// TODO: Create a function to write README file
-function writeToFile(README, data) {}
-
-
-// TODO: Create a function to initialize app
-function init() {}
-
-// Function call to initialize app
-init();
-
-
 const inquirer = require('inquirer');
-
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown');
 
-inquirer
-  .prompt([
+// TODO: Create an array of questions for user input
+
+const questions = [
     {
         type: 'input',
         message: 'What is the title of this application?',
@@ -35,12 +20,33 @@ inquirer
     {
         type: 'input',
         message: 'What does the user need to access this application?',
-        name: '',
+        name: 'systemreqs',
     },
     {
         type: 'input',
         message: 'How can one use this application?',
-        name: '',
+        name: 'directions',
+    },
+    {
+        type: 'input',
+        message: 'What are the contribution guidelines?',
+        name: 'conguide',
+    },
+    {
+        type: 'checkbox',
+        message: 'choose a free license',
+        choices: [
+            new inquirer.Separator('== License =='),
+            {
+                name: 'WTFPL',
+            },
+            {
+                name: 'MIT',
+            },
+            {
+                name: 'Apache'
+            },
+        ]
     },
     {
         type: 'input',
@@ -52,18 +58,39 @@ inquirer
         message: 'What is your email address?',
         name: 'emailaddress',
     },
-  ]);
-  .then((response) => (${response.})
-  
+];
 
-    fs.writeFile("README.md" , generateMarkdown(response), (err) =>
-    err ? console.error(err) : console.log('success!')),
+// TODO: Create a function to write README file
+function writeToFile(README, data) { }
 
-  );
 
-  generateMarkdown (response) {
-    return;
-    '##Name'
-    ${name}
+// TODO: Create a function to initialize app
 
-  }
+
+// Function call to initialize app
+init();
+
+
+
+
+
+
+function init() { 
+inquirer
+    .prompt(questions)
+
+    .then((data) => {
+        const filename = `README.md`;
+        
+        fs.appendFile(filename, JSON.stringify(questions, null, `\t`), (err) =>
+            err ? console.error(err) : console.log('success!')
+        );
+    });
+
+}
+// generateMarkdown(response) {
+//     return;
+//     '##Name'
+//     ${ name }
+
+// }
