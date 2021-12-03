@@ -61,7 +61,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(README, data) { }
+// function writeToFile(README, data) {
+//     generateMarkdown
+//  }
 
 
 // TODO: Create a function to initialize app
@@ -75,22 +77,18 @@ init();
 
 
 
-function init() { 
+function init() {
+
 inquirer
     .prompt(questions)
 
-    .then((data) => {
+    .then((questions) => {
         const filename = `README.md`;
-        
-        fs.appendFile(filename, JSON.stringify(questions, null, `\t`), (err) =>
+
+        fs.writeFile(filename, generateMarkdown(answers), (err) =>
             err ? console.error(err) : console.log('success!')
         );
-    });
+});
 
-}
-// generateMarkdown(response) {
-//     return;
-//     '##Name'
-//     ${ name }
+    // writeToFile();
 
-// }
