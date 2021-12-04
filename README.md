@@ -1,30 +1,32 @@
 
-asdloikn
+ReadMe Generator
 ========
 
   ## Description
 
-asoeinwaes
+Using command prompts the user can generate a professional readme
 
   ## System Requirements
 
-afsdlknija
+A pc
 
   ## Directions
 
-ksladfnb
+type node index.js while in the repo
 
   ## Contribution Guidelines
 
-asdlkfnbwe
+Have fun
 
   ## License
 
-WTFPL
+  ![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+  
+Apache
 
   ## Contact
 
-Github Profile: https://github.com/sdaflookijnwae
+Github Profile: https://github.com/SherlockTheHomie
 
-Email Address: afoinwe
+Email Address: glhlerault@tcmsolutions.net
 
