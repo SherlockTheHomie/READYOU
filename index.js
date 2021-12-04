@@ -19,7 +19,7 @@ const questions = [
     },
     {
         type: 'input',
-        message: 'What does the user need to access this application?',
+        message: 'What does the user need to run this application?',
         name: 'systemreqs',
     },
     {
@@ -33,20 +33,20 @@ const questions = [
         name: 'conguide',
     },
     {
-        type: 'checkbox',
+        type: 'list',
+        name: 'license',
         message: 'choose a free license',
         choices: [
-            new inquirer.Separator('== License =='),
             {
-                name: 'WTFPL',
+            name: "WTFPL",
             },
-            {
-                name: 'MIT',
+            { 
+            name: "Apache",
             },
-            {
-                name: 'Apache'
+            { 
+            name: "MIT",
             },
-        ]
+        ],
     },
     {
         type: 'input',
@@ -57,6 +57,11 @@ const questions = [
         type: 'input',
         message: 'What is your email address?',
         name: 'emailaddress',
+    },
+    {
+        type: 'input',
+        message: 'Please enter the filepath where you would like this readme to be created',
+        name: 'filepath',
     },
 ];
 
@@ -82,13 +87,11 @@ function init() {
 inquirer
     .prompt(questions)
 
-    .then((questions) => {
+    .then((answers) => {
         const filename = `README.md`;
 
         fs.writeFile(filename, generateMarkdown(answers), (err) =>
             err ? console.error(err) : console.log('success!')
         );
 });
-
-    // writeToFile();
-
+}
