@@ -1,32 +1,42 @@
 
-ReadMe Generator
+Video Proof
 ========
 
   ## Description
 
-Using command prompts the user can generate a professional readme
+To show proof via video
+
+  ## Table of Contents
+
+  - [Description](#description)
+  - [System Requirements](#systemreqs)
+  - [Directions](#directions)
+  - [Contribution Guidelines](#conguide)
+  - [License](#license)
+  - [Contact](#user)
 
   ## System Requirements
 
-A pc
+their mind
 
   ## Directions
 
-type node index.js while in the repo
+with a computer
 
   ## Contribution Guidelines
 
-Have fun
+have fun
 
   ## License
 
-  ![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![License: Apache](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
   
 Apache
+
 
   ## Contact
 
 Github Profile: https://github.com/SherlockTheHomie
 
-Email Address: glhlerault@tcmsolutions.net
+Email Address: glherault@tcmsolutions.net
 
