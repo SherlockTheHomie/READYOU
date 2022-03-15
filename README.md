@@ -1,5 +1,5 @@
 
-Readme Generator
+READYOU - The Readme Generator
 ========
 
   ## Description
